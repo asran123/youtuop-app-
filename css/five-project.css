@@ -1,0 +1,639 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Open sans", sans-serif;
+}
+
+:root {
+    --background-color-alt: #000016;
+    --cod-zela-color: #601cfc;
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --asran-color: #78d3fb;
+    --main-transition: 0.5s;
+}
+
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #f1f5f9;
+    position: fixed;
+    z-index: 999;
+    padding: 20px 100px 20px 100px;
+}
+
+.logo {
+    font-weight: 700;
+    color: var(--blue-alt-color);
+    text-transform: uppercase;
+    font-size: 1.8em;
+
+}
+
+.navigation a {
+    color: var(--blue-color);
+    font-size: 1.3em;
+    font-weight: 500;
+    padding-left: 30px;
+
+}
+
+.navigation a:hover {
+    color: var(--cod-zela-color);
+    text-decoration: underline;
+    text-decoration-color: var(--cod-zela-color);
+}
+
+section .main {
+    padding: 150px 0 0 100px;
+    width: 100%;
+    min-height: 100vh;
+    background: url(../img/features.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section .main h2 {
+    color: var(--asran-color);
+    font-size: 1.3em;
+    font-weight: 500;
+
+
+}
+
+section .main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+
+section .main h3 {
+    color: var(--asran-color);
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+
+section .main .main-bn {
+    display: inline-block;
+    color: white;
+    padding: 15px;
+    margin-bottom: 25px;
+    font-size: 1em;
+    font-weight: 300;
+    border: 2px solid var(--asran-color);
+    border-radius: 10px;
+    transition: var(--main-transition);
+    background-color: #3994ff;
+    font-weight: bold;
+
+}
+
+section .main .main-bn:hover {
+    background-color: var(--blue-color);
+    transform: scale(1.1);
+
+}
+
+section .main .social-icons a {
+    color: white;
+    font-size: 1.4em;
+    padding-right: 20px;
+    transition: var(--main-transition);
+}
+
+section .main .social-icons a i:hover {
+    color: var(--asran-color);
+    transform: scale(1.1);
+
+
+}
+
+#services {
+    padding-top: 50px;
+    padding: 50px;
+}
+
+/* start title  */
+
+.title {
+    margin: 0 auto 80px;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    transition: var(--main-transition);
+    border-radius: 10px;
+
+
+}
+
+
+
+
+
+.title::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: var(--asran-color);
+    border-radius: 100%;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translatey(-50%);
+
+
+
+}
+
+.title:hover::before {
+    z-index: -1;
+    animation: left-move 0.5s linear forwards;
+
+}
+
+.title::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: var(--asran-color);
+    border-radius: 100%;
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translatey(-50%);
+
+}
+
+.title:hover::after {
+
+    z-index: -1;
+    animation: right-move 0.5s linear forwards;
+
+}
+
+.title:hover {
+    color: white;
+    transition-delay: 0.5s;
+    border: 2px solid white;
+}
+
+/* ****************************** */
+.title-alt {
+    margin: 0 auto 80px;
+    border: 2px solid var(--asran-color);
+    color: var(--asran-color);
+    padding: 10px 20px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    transition: var(--main-transition);
+    border-radius: 10px;
+
+
+}
+
+
+
+
+
+.title-alt::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: var(--asran-color);
+    border-radius: 100%;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translatey(-50%);
+
+
+
+}
+
+.title-alt:hover::before {
+    z-index: -1;
+    animation: left-move 0.5s linear forwards;
+
+}
+
+.title-alt::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: var(--asran-color);
+    border-radius: 100%;
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translatey(-50%);
+
+}
+
+.title-alt:hover::after {
+
+    z-index: -1;
+    animation: right-move 0.5s linear forwards;
+
+}
+
+.title-alt:hover {
+    color: white;
+    transition-delay: 0.5s;
+    border: 2px solid white;
+}
+
+
+/* End main title animaion */
+
+/* start serveses  */
+
+.cards {
+    color: #eee;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+
+}
+
+.cards .card {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    width: fit-content;
+    box-shadow: 5px 5px 15px var(--grey-color);
+    transition: var(--main-transition);
+    border-radius: 10px;
+
+}
+
+.cards .card:hover {
+    transform: scale(1.1);
+
+
+}
+
+.cards .card .icon i {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8em;
+    color: var(--grey-color);
+    transition: var(--main-transition);
+}
+
+.cards .card:hover .icon i {
+    color: var(--asran-color);
+
+}
+
+.cards .card .info {
+    text-align: center;
+
+
+
+}
+
+.cards .card .info h3 {
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--grey-color);
+
+
+}
+
+.cards .card:hover .info h3 {
+
+    color: var(--asran-color);
+
+
+}
+
+.cards .card .info p {
+
+    margin: 5px;
+    color: var(--grey-color);
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.cards .card:hover .info p {
+    color: black;
+
+}
+
+/* end serveses  */
+
+/* start project  */
+.project-oll {
+    background-color: #000016;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.Projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+
+}
+
+.Projects .project-card {
+    padding: 10px;
+    margin: 10px;
+    background-color: #eee;
+    width: fit-content;
+    box-shadow: 5px 5px 15px var(--grey-color);
+    transition: var(--main-transition);
+    border-radius: 10px;
+
+}
+
+
+.Projects .project-card:hover {
+    transform: scale(1.1);
+}
+
+.Projects .project-card .project-img img {
+    box-shadow: 5px 5px 15px var(--grey-color);
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+}
+
+.Projects .project-card:hover .project-img img {
+    opacity: 0.9;
+}
+
+.Projects .project-card .info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Projects .project-card .info .project-category {
+    font-weight: 500;
+    font-size: 1.2em;
+    color: var(--asran-color);
+    padding: 0 0 10px 10px;
+}
+
+
+.Projects .project-card .info .project-title {
+    color: var(--grey-color);
+    font-size: 1em;
+    font-weight: 300;
+    padding: 0 0 10px 10px;
+}
+
+.Projects .project-card .more {
+    padding: 10px 15px 0 0;
+    text-align: center;
+}
+
+.Projects .project-card .more a {
+    display: inline-block;
+
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 5px 5px 15px var(--grey-color);
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 1.3em;
+    color: white;
+    background-color: var(--asran-color);
+    transition: var(--main-transition);
+
+}
+
+.Projects .project-card .more a:hover {
+    transform: scale(1.1);
+    font-weight: 500;
+
+}
+
+.Projects .project-card .more a i {
+    transition: var(--main-transition);
+
+}
+
+.Projects .project-card .more a:hover i {
+    color: black;
+
+}
+
+
+
+/* end project  */
+
+/* start cuntent  */
+.contact-oll {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contact-oll .work-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+}
+
+.contact-oll .work-card .card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    width: 14em;
+    min-height: 15em;
+    box-shadow: 5px 5px 15px var(--grey-color);
+    transition: var(--main-transition);
+    border-radius: 10px;
+
+
+}
+
+.contact-oll .work-card .card:hover {
+    transform: scale(1.1);
+}
+
+.contact-oll .work-card .card .icon {
+    font-size: 5em;
+    color: var(--grey-color);
+    transition: var(--main-transition);
+
+
+
+
+}
+
+.contact-oll .work-card .card:hover .icon .phone {
+    color: var(--blue-color);
+
+
+
+}
+
+.contact-oll .work-card .card:hover .icon .whatsapp {
+    color: var(--green-color);
+
+
+
+}
+
+.contact-oll .work-card .card:hover .icon .envelope {
+    color: var(--blue-alt-color);
+
+
+}
+
+.contact-oll .work-card .card:hover .icon .facebook {
+    color: var(--blue-color);
+
+
+
+}
+
+.contact-oll .work-card .card:hover .icon .instagram {
+    color: var(--red-color)
+}
+
+.contact-oll .work-card .card:hover .info {
+    color: var(--asran-color);
+    font-weight: bold;
+
+
+
+}
+
+/* start footer  */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    width: 100%;
+    height: 20px;
+    background: var(--background-color-alt);
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.footer p {
+    font-weight: 600;
+    font-size: 1.3em;
+    color: white;
+}
+
+.footer p span {
+    color: var(--asran-color);
+}
+
+.footer .social-footer a {
+    padding: 0 12px 0 0;
+    color: var(--asran-color);
+    font-size: 1.3em;
+
+}
+
+
+/* end footer  */
+
+
+
+
+
+
+/* end cuntent  */
+
+
+
+/* start animaion */
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+
+    }
+
+    100% {
+        left: 0;
+        border-radius: 8px 0 0 8px;
+        width: 100%;
+        height: 100%;
+
+    }
+
+}
+
+@keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+
+    }
+
+    100% {
+        right: 0;
+        border-radius: 0 8px 8px 0;
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+
+/* end animaion */
